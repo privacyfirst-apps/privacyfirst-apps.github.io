@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all PrivacyFirst Apps — privacy-first Windows desktop applications with no ads, no tracking, and full offline support.">
+    <title>All Apps — PrivacyFirst Apps</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app-styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-icon">🛡️</span>
+                <span class="brand-text">PrivacyFirst <span class="brand-accent">Apps</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="apps.html" class="nav-link active">Apps</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== APP STORE HERO ===== -->
+    <section class="store-hero">
+        <div class="container">
+            <div class="store-hero-content">
+                <span class="section-tag">Our Software Collection</span>
+                <h1 class="section-title">Privacy-First<br><span class="highlight">Windows Apps</span></h1>
+                <p class="section-subtitle">Every app below follows our unbreakable promise — zero ads, zero tracking, zero data collection, 100% offline functionality.</p>
+            </div>
+
+            <!-- FILTER BUTTONS -->
+            <div class="store-filters">
+                <button class="filter-btn active" data-filter="all">
+                    All Apps
+                    <span class="filter-count" id="count-all">0</span>
+                </button>
+                <button class="filter-btn" data-filter="free">
+                    🆓 Free
+                    <span class="filter-count" id="count-free">0</span>
+                </button>
+                <button class="filter-btn" data-filter="freemium">
+                    ⭐ Freemium
+                    <span class="filter-count" id="count-freemium">0</span>
+                </button>
+                <button class="filter-btn" data-filter="paid">
+                    💎 Premium
+                    <span class="filter-count" id="count-paid">0</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== APP GRID ===== -->
+    <section class="store-grid-section">
+        <div class="container">
+            <div class="app-grid" id="appGrid">
+
+                <!-- ==========================================
+                     APP CARD TEMPLATE — COPY THIS FOR EACH APP
+                     ==========================================
+                     
+                     To add a new app:
+                     1. Copy one app-card div below
+                     2. Paste it after the last app-card
+                     3. Change the details (icon, name, description, etc.)
+                     4. Change data-category to: "free", "freemium", or "paid"
+                     5. Change the href link to point to your app page
+                     
+                     ========================================== -->
+
+                <!-- APP 1: EXAMPLE FREE APP -->
+                <a href="apps/sample-app.html" class="app-card" data-category="free">
+                    <div class="app-card-header">
+                        <div class="app-icon-wrapper">
+                            <span class="app-icon-emoji">📝</span>
+                        </div>
+                        <span class="app-pricing free">Free</span>
+                    </div>
+                    <h3 class="app-name">Sample Notes App</h3>
+                    <p class="app-short-desc">A clean, distraction-free notepad that keeps your notes private and stored locally on your computer.</p>
+                    <div class="app-card-tags">
+                        <span class="app-tag">Productivity</span>
+                        <span class="app-tag">Offline</span>
+                    </div>
+                    <div class="app-card-footer">
+                        <span class="app-platform">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            Windows
+                        </span>
+                        <span class="app-card-arrow">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- APP 2: EXAMPLE FREEMIUM APP -->
+                <a href="apps/sample-app-2.html" class="app-card" data-category="freemium">
+                    <div class="app-card-header">
+                        <div class="app-icon-wrapper">
+                            <span class="app-icon-emoji">🔒</span>
+                        </div>
+                        <span class="app-pricing freemium">Freemium</span>
+                    </div>
+                    <h3 class="app-name">Sample Password Vault</h3>
+                    <p class="app-short-desc">Store and manage your passwords securely, encrypted locally with AES-256. No cloud, no sync, no risk.</p>
+                    <div class="app-card-tags">
+                        <span class="app-tag">Security</span>
+                        <span class="app-tag">Encryption</span>
+                    </div>
+                    <div class="app-card-footer">
+                        <span class="app-platform">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            Windows
+                        </span>
+                        <span class="app-card-arrow">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- APP 3: EXAMPLE PAID APP -->
+                <a href="apps/sample-app-3.html" class="app-card" data-category="paid">
+                    <div class="app-card-header">
+                        <div class="app-icon-wrapper">
+                            <span class="app-icon-emoji">🎨</span>
+                        </div>
+                        <span class="app-pricing paid">$9.99</span>
+                    </div>
+                    <h3 class="app-name">Sample Image Editor</h3>
+                    <p class="app-short-desc">A powerful offline image editor with batch processing, filters, and format conversion. No subscription needed.</p>
+                    <div class="app-card-tags">
+                        <span class="app-tag">Creative</span>
+                        <span class="app-tag">Images</span>
+                    </div>
+                    <div class="app-card-footer">
+                        <span class="app-platform">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                            Windows
+                        </span>
+                        <span class="app-card-arrow">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- EMPTY STATE (shows when filter has no results) -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <span class="empty-icon">📭</span>
+                <h3>No apps in this category yet</h3>
+                <p>We are working on adding more apps. Check back soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRIVACY REMINDER ===== -->
+    <section class="store-privacy-reminder">
+        <div class="container">
+            <div class="privacy-reminder-card">
+                <div class="privacy-reminder-icon">🛡️</div>
+                <h3>Every App On This Page Follows Our Privacy Promise</h3>
+                <div class="privacy-reminder-badges">
+                    <span>✕ No Ads</span>
+                    <span>✕ No Tracking</span>
+                    <span>✕ No Telemetry</span>
+                    <span>✕ No Data Collection</span>
+                    <span>✓ 100% Offline</span>
+                    <span>✓ Windows .exe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">🛡️</span>
+                    <span class="brand-text">PrivacyFirst <span class="brand-accent">Apps</span></span>
+                </div>
+                <p class="footer-tagline">Software That Respects You</p>
+                <div class="footer-privacy-note">
+                    <p>🔒 This website itself follows our privacy promise. No cookies, no analytics, no tracking scripts. Zero data collection.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PrivacyFirst Apps. All rights reserved.</p>
+                <p>Built with privacy at the core.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="app-store.js"></script>
+</body>
+</html>
